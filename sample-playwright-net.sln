@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{7419EC9C-C30A-4EFF-97A1-22E7684EF3AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaywrightTests", "PlaywrightTests\PlaywrightTests.csproj", "{639EE9CB-077B-4585-A3FD-CBDAFDE1295E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{7419EC9C-C30A-4EFF-97A1-22E7684EF3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7419EC9C-C30A-4EFF-97A1-22E7684EF3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7419EC9C-C30A-4EFF-97A1-22E7684EF3AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639EE9CB-077B-4585-A3FD-CBDAFDE1295E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639EE9CB-077B-4585-A3FD-CBDAFDE1295E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639EE9CB-077B-4585-A3FD-CBDAFDE1295E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639EE9CB-077B-4585-A3FD-CBDAFDE1295E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
