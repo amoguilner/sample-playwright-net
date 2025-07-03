@@ -14,12 +14,18 @@ public class BlazorAppTests : PageTest
     }
 
     [TestMethod]
-    public async Task TestCounter()
+    public async Task CounterShouldShowExpectedMessageWhenClickedFewTimes()
     {
         await Page.Context.Tracing.GroupAsync("Navigate to the counter component");
         await Page.GetByRole(AriaRole.Link, new PageGetByRoleOptions() { Name = "Counter" }).ClickAsync();
         await Expect(Page.GetByRole(AriaRole.Heading, new PageGetByRoleOptions() { Name = "Counter" }))
             .ToBeVisibleAsync();
+        await Page.Context.Tracing.GroupEndAsync();
+
+        var messageArea = Page.GetByRole(AriaRole.Status);
+        
+        await Page.Context.Tracing.GroupAsync("Verify initial message");
+        Assert.AreEqual("Current count: 0", await messageArea.TextContentAsync());
         await Page.Context.Tracing.GroupEndAsync();
         
         await Page.Context.Tracing.GroupAsync("Click counter 10 times");
@@ -32,7 +38,7 @@ public class BlazorAppTests : PageTest
         await Page.Context.Tracing.GroupEndAsync();
         
         await Page.Context.Tracing.GroupAsync("Verify message");
-        Assert.AreEqual("Current count: 10", await Page.GetByRole(AriaRole.Status).TextContentAsync());
+        Assert.AreEqual("Current count: 10", await messageArea.TextContentAsync());
         await Page.Context.Tracing.GroupEndAsync();
     }
 }
