@@ -1,7 +1,7 @@
 ﻿namespace PlaywrightTests;
 
 [TestClass]
-public class   TestExternalSite : PageTest
+public class   ExternalSiteTests : PageTest
 {
     [TestMethod]
     public async Task HomepageHasPlaywrightInTitleAndGetStartedLinkLinkingToTheIntroPage()
